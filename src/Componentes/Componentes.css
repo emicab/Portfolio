@@ -1,0 +1,80 @@
+:root {
+    --color-primario: #ffffff;
+    --color-secundario: #2887F5;
+    --color-fondo: #222222;
+    --font-principal: 96px;
+    --font-body: 64px;
+    --font-body2: 40px; 
+}
+/* SOBRE MI */
+.contenedorAbout{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center !important;
+    user-select: none;
+}
+.contenedorAbout .contenedorTexto{
+    background-color: var(--color-fondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.contenedorAbout .textoTitulo{
+    text-align: center;
+    width: 80%;
+    color: var(--color-primario)
+}
+.contenedorAbout .f-bold{
+    font-weight: bold;
+}
+.contenedorAbout .subrayado {
+    position: relative;
+    top: -20px;
+    left: -600px;
+    z-index: 10;
+    width: 350px;
+    height: 10px;
+    background-color: var(--color-secundario);
+}
+
+/* HABILIDADES */
+
+.contenedorHabil{
+    width: 100%;
+    height: 900px;
+    background-color: var(--color-primario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.contenedorHabil .contenedorTexto {
+    width: 80%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+.contenedorHabil .textoTitulo {
+    color: var(--color-fondo)
+}
+.contenedorHabil .subrayado {
+    position: relative;
+    top: -40px;
+    left: 0px;
+    z-index: 10;
+    width: 450px;
+    height: 10px;
+    background-color: var(--color-secundario);
+}
+.mleft{
+    margin-left: 55px;
+}
+.mbot {
+    margin-bottom: 20px;
+}
+.mbot50 {
+    margin-bottom: 50px;
+}
