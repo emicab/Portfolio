@@ -26,7 +26,7 @@ export const ContainerText = styled.div`
 `;
 
 export const TextSpan = styled.h4`
-    font-size: ${fonts.font40};
+    font-size: ${fonts.font50};
     color: ${props => props.color === 'white' 
         ? colours.colorPrimario 
         : colours.colorFondo};
@@ -37,6 +37,14 @@ export const TextSpan = styled.h4`
     margin-left: ${props => props.ml || 0};
     z-index: 100;
     width: ${props => props.width || "100%"};
+
+    @media screen and (max-width: 1920px) {
+        font-size: 50px;
+    }
+    @media screen and (max-width: 1366px) {
+        font-size: 36px;
+        width: 900px;
+    }
 `;
 export const ContainerTextMain = styled.div`
     display: flex;
@@ -49,8 +57,24 @@ export const TextMain = styled.h2`
         : colours.colorSecundario};
     font-size: ${fonts.fontPrincipal};
     margin-bottom: 20px;
-    
+
+    @media screen and (max-width: 1920px) {
+        font-size: 96px;
+    }
+    @media screen and (max-width: 1366px) {
+        font-size: 68px;
+    }
 `;
+
+export const TextSubrayado = styled.div`
+    display: flex;
+    flex-Direction: column;
+    width: ${props => props.width}px;
+
+    @media screen and (max-width: 1367px) {
+        width: ${props => props.widthMedia};
+    }
+`
 
 export const Subrayado = styled.span`
     width: ${props => props.width || "600px"};
@@ -58,9 +82,17 @@ export const Subrayado = styled.span`
     background-color: ${colours.colorSecundario};
     margin:0 auto;
     position: relative;
-    top: ${props => props.top || "-20px"};
-    left: ${props => props.left || "0"};
+    /* top: ${props => props.top || "-20px"};
+    left: ${props => props.left || "0"}; */
     z-index: 10;
+
+    @media screen and (max-width: 1367px) {
+        position: relative;
+        left: -10px;
+        top: -39px;
+        width: ${props => props.widthMedia || "600px"};
+    }
+    
 `;
 
 const swipe = keyframes`
@@ -88,7 +120,11 @@ export const Icon = styled(FontAwesomeIcon)`
     color: ${colours.colorFondo};
     font-size: 50px;
     position: relative;
-    bottom: ${props => props.bottom};
+
+    @media screen and (max-width: 1367px) {
+        width: 40px;
+        height: 40px;
+    }
 `;
 
 export const Titulo = styled.h3`
@@ -100,5 +136,69 @@ export const Titulo = styled.h3`
     text-align: left;
     margin-bottom: 20px;
     z-index: 100;
+    width: 100%;
+
+    &::before{
+        background-color: ${colours.colorSecundario};
+        content: '';
+        height: 10px;
+        width: ${props => props.anchoSub}px;
+        position: absolute;
+        transform: translateY(62px);
+        z-index: -1;
+    }
+
+    @media screen and (max-width: 1920px) {
+        font-size: 64px;
+        
+    }
+    @media screen and (max-width: 1367px) {
+        font-size: 50px;
+        &::before{
+        background-color: ${colours.colorSecundario};
+        content: '';
+        height: 10px;
+        width: ${props => props.anchoSubMedia}px;
+        position: absolute;
+        transform: translateY(47px);
+        z-index: -1;
+    }
+    }
+`
+export const SuBtitulo = styled.h3`
+    color: ${colours.colorPrimario};
+    font-weight: ${fonts.fontRegular};
+    font-size: ${fonts.fontBody};
+    text-align: center;
+    margin-bottom: 20px;
+    z-index: 100;
+    width: 100%;
+
+    &::before{
+        background-color: ${colours.colorSecundario};
+        content: '';
+        height: 10px;
+        width: ${props => props.anchoSub}px;
+        position: absolute;
+        transform: translateY(62px);
+        z-index: -1;
+    }
+
+    @media screen and (max-width: 1920px) {
+        font-size: 64px;
+        
+    }
+    @media screen and (max-width: 1367px) {
+        font-size: 50px;
+        &::before{
+        background-color: ${colours.colorSecundario};
+        content: '';
+        height: 10px;
+        width: ${props => props.anchoSubMedia}px;
+        position: absolute;
+        transform: translateY(47px);
+        z-index: -1;
+    }
+    }
 `
 

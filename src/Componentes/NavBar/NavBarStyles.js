@@ -22,7 +22,7 @@ export const Logo = styled.img`
 `;
 
 export const Ul = styled.ul`
-    width: 700px;
+    width: 600px;
     height: 30px;
     display: flex;
     justify-content: space-around;
@@ -30,7 +30,11 @@ export const Ul = styled.ul`
     list-style: none;
     list-style-type: none;
     padding: 0;
-    color: ${colours.colorPrimario}
+    color: ${colours.colorPrimario};
+
+    @media screen and (max-width: 768px) {
+    width: 400px;
+    }
 `;
 
 export const Li = styled.li`
